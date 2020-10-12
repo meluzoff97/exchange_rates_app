@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p align="center">Until refresh <span id="timer">20</span> seconds</p>	
+<table class="table table-striped table-bordered" id="my_data">
+	<tr align="center">
+		<th>Logo with link</th>
+		<th>Sell USD($)</th>
+		<th>Buy USD($)</th>
+		<th>Sell EUR(€)</th>
+		<th>Buy EUR(€)</th>	 
+	</tr>
+	{% for key in data.keys() %}
+	<tr align="center">
+		<td><a href="{{ data[key]['user_url'] }}"><img src="{{ data[key]['icon'] }}" height=28 width=105></a></td>
+		<td>{{ data[key]['buy']['USD'] }}</td>
+		<td>{{ data[key]['sell']['USD'] }}</td>
+		<td>{{ data[key]['buy']['EUR'] }}</td>
+		<td>{{ data[key]['sell']['EUR'] }}</td>	
+	</tr>
+	{% endfor %}
+</table>
+<script type="text/javascript">
+	let counter = 19;
+	setInterval(() => {
+	document.getElementById('timer').innerText = counter;
+	counter--;
+	if(counter < 0) location.reload();
+}, 1000);	
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+    "Alfabank": {
+        "api_url": "https://alfabank.ru/_/rss/_currency.html",
+        "buy": {
+            "EUR": 90.26,
+            "USD": 76.44
+        },
+        "icon": "/static/logo/alfabank.png",
+        "sell": {
+            "EUR": 91.86,
+            "USD": 77.94
+        },
+        "user_url": "https://alfabank.ru/currency/"
+    },
+    "Sberbank": {
+        "api_url": {
+            "EUR": "https://www.sberbank.ru/portalserver/proxy/?pipe=shortCachePipe&url=http%3A%2F%2Flocalhost%2Frates-web%2FrateService%2Frate%2Fcurrent%3FregionId%3D77%26rateCategory%3Dbase%26currencyCode%3D978",
+            "USD": "https://www.sberbank.ru/portalserver/proxy/?pipe=shortCachePipe&url=http%3A%2F%2Flocalhost%2Frates-web%2FrateService%2Frate%2Fcurrent%3FregionId%3D77%26rateCategory%3Dbase%26currencyCode%3D840"
+        },
+        "buy": {
+            "EUR": 88.85,
+            "USD": 75.15
+        },
+        "icon": "/static/logo/sberbank.png",
+        "sell": {
+            "EUR": 93.31,
+            "USD": 79.02
+        },
+        "user_url": "https://www.sberbank.ru/ru/quotes/currencies"
+    },
+    "Tinkoff": {
+        "api_url": "https://www.tinkoff.ru/api/v1/currency_rates/",
+        "buy": {
+            "EUR": 88.7,
+            "USD": 75.1
+        },
+        "icon": "/static/logo/tinkoff.jpeg",
+        "sell": {
+            "EUR": 93.25,
+            "USD": 78.95
+        },
+        "user_url": "https://www.tinkoff.ru/about/exchange/"
+    }
+}
